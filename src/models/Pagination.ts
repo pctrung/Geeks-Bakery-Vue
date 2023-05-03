@@ -5,10 +5,11 @@ export interface PaginationParams {
 }
 
 export interface PaginationResult<T> {
-  itemCount: number
-  perPage: number
-  pageCount: number
+  search: string
+  totalItems: number
+  totalPages: number
   page: number
+  limit: number
   hasPrevPage: boolean
   hasNextPage: boolean
   prevPage: number | null

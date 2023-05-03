@@ -3,7 +3,7 @@ import queryString from 'query-string'
 
 const mockApi = 'https://6450ca10e1f6f1bb229ef960.mockapi.io/api'
 const HttpClient = axios.create({
-  baseURL: process.env.API_URL ?? mockApi,
+  baseURL: import.meta.env.VITE_API_URL ?? mockApi,
   timeout: 300000,
   headers: {
     'Content-Type': 'application/json'
@@ -28,9 +28,7 @@ HttpClient.interceptors.request.use(async (config) => {
 })
 HttpClient.interceptors.response.use(
   (response) => {
-    if (response && response.data) {
-      return response.data
-    }
+    return response
   },
   (error) => {
     console.error(error)
