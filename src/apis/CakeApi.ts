@@ -10,9 +10,9 @@ const CakeApi = {
       // for demo purpose
       // const result = await HttpClient.get<PaginationResult<Cake>>(url, { params })
       // return result.data
-      const data = await HttpClient.get(url, { params })
-      const result: PaginationResult<Cake> = {
-        data: data.data,
+      const response = await HttpClient.get(url, { params })
+      const demoResult: PaginationResult<Cake> = {
+        data: response.data,
         search: '',
         totalItems: 20,
         totalPages: 2,
@@ -23,18 +23,18 @@ const CakeApi = {
         prevPage: null,
         nextPage: 2
       }
-      return result
+      return demoResult
     } catch (error) {
       return null
     }
   },
-  getByIdAsync: async (id: string): Promise<Cake | null> => {
+  getByIdAsync: async (id: string): Promise<Cake | undefined> => {
     try {
       const url = `${baseApiUrl}/${id}`
       const result = await HttpClient.get<Cake>(url)
       return result.data
     } catch (error) {
-      return null
+      return undefined
     }
   }
 }

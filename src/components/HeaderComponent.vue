@@ -1,12 +1,14 @@
 <script setup lang="ts">
 import { reactive } from 'vue'
+import { useRouter } from 'vue-router'
 
+const router = useRouter()
 let state = reactive({
   search: ''
 })
 
 const handleSearch = () => {
-  window.location.href = `/cakes?search=${state.search}`
+  state.search && router.push(`/cakes?search=${state.search}`)
 }
 </script>
 
@@ -22,7 +24,7 @@ const handleSearch = () => {
           <RouterLink to="/cakes" class="header__menu__item">Cakes</RouterLink>
           <RouterLink to="/about" class="header__menu__item">About</RouterLink>
         </nav>
-        <form method="get" class="header__search">
+        <form @submit.prevent="handleSearch" class="header__search">
           <button class="header__search__button noselect">
             <img src="@assets/icons/search.png" alt="search icon" @(click)="handleSearch" />
           </button>

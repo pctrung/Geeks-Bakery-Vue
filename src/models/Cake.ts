@@ -7,4 +7,5 @@ export interface Cake {
   originalPrice: number
   description: string
   categoryId: string
+  categoryName: string
 }

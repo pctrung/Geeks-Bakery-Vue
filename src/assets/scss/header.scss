@@ -58,6 +58,8 @@
   border-radius: 15px;
   padding: 15px 21px 15px 50px;
   border: 2px solid transparent;
+
+  transition: all 0.2s;
 }
 
 .header__search input[type='text']:focus {
