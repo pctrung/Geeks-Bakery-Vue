@@ -9,9 +9,6 @@
     "ignoreDeprecations": "5.0",
     "baseUrl": "./src",
     "paths": {
-      "@/*": [
-        "*"
-      ],
       "@components/*": [
         "components/*"
       ],
@@ -21,9 +18,6 @@
       "@assets/*": [
         "assets/*"
       ],
-      "@styles/*": [
-        "styles/*"
-      ],
       "@utils/*": [
         "utils/*"
       ],
@@ -32,6 +26,15 @@
       ],
       "@router/*": [
         "router/*"
+      ],
+      "@models/*": [
+        "models/*"
+      ],
+      "@apis/*": [
+        "apis/*"
+      ],
+      "@utils/*": [
+        "utils/*"
       ],
     },
     "types": [
