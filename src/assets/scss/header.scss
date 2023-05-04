@@ -221,7 +221,7 @@
     height: 35px;
   }
 
-  #nav-mobile__button:checked~.nav-mobile {
+  #nav-mobile__button:checked ~ .nav-mobile {
     visibility: visible;
     display: flex;
     transform: translateX(0%);

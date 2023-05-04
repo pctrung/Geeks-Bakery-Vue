@@ -200,7 +200,7 @@ body {
   z-index: 10;
 }
 
-.paging-arrow>circle {
+.paging-arrow > circle {
   fill: rgba(255, 255, 255, 0);
   transition: all 0.2s ease-in;
 }
@@ -210,13 +210,13 @@ body {
   transition: all 0.2s ease-out;
 }
 
-.paging-arrow:hover>circle {
+.paging-arrow:hover > circle {
   stroke: var(--color-primary);
   fill: var(--color-primary);
   transition: all 0.2s ease-out;
 }
 
-.paging-arrow:active>circle {
+.paging-arrow:active > circle {
   stroke: var(--color-active);
   fill: var(--color-active);
   transition: all 0.2s ease-out;
@@ -229,7 +229,7 @@ body {
   margin: 20px 0;
 }
 
-.paging-numbers>*:not(:first-child) {
+.paging-numbers > *:not(:first-child) {
   margin-left: 8px;
 }
 
